@@ -1,1 +1,4 @@
-console.log('test');
+import './style.css';
+import initializeWebsite from './layout';
+
+initializeWebsite();
