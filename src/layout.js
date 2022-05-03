@@ -1,4 +1,6 @@
-import loadHomePage from './home';
+import loadContact from './contact';
+import loadHome from './home';
+import loadMenu from './menu';
 
 function createHeader() {
   const header = document.createElement('header');
@@ -20,6 +22,7 @@ function createNav() {
   homeButton.addEventListener('click', (e) => {
     if (e.target.classList.contains('active')) return;
     changeActiveButton(homeButton);
+    loadHome();
   });
 
   const menuButton = document.createElement('button');
@@ -27,6 +30,7 @@ function createNav() {
   menuButton.addEventListener('click', (e) => {
     if (e.target.classList.contains('active')) return;
     changeActiveButton(menuButton);
+    loadMenu();
   });
 
   const contactButton = document.createElement('button');
@@ -34,6 +38,7 @@ function createNav() {
   contactButton.addEventListener('click', (e) => {
     if (e.target.classList.contains('active')) return;
     changeActiveButton(contactButton);
+    loadContact();
   });
 
   nav.appendChild(homeButton);
@@ -74,7 +79,7 @@ function initializeWebsite() {
   content.appendChild(createMain());
   content.appendChild(createFooter());
 
-  loadHomePage();
+  loadHome();
 }
 
 export default initializeWebsite;

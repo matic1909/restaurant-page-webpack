@@ -22,13 +22,13 @@ function createParagraph(text) {
   return paragraph;
 }
 
-function loadHomePage() {
+function loadHome() {
   const main = document.querySelector('main');
-  // Clear the content when switching to homepage
+  // Clear the content when switching to home
   main.textContent = '';
   main.appendChild(createHomepage());
 
   return main;
 }
 
-export default loadHomePage;
+export default loadHome;
